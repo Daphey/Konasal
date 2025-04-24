@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONASAL TRAINING INSTITUTE - Career Courses & Training</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0a2463; /* Navy Blue */
+            --secondary-color: #001845;
+            --accent-color: #DAA520; /* Gold */
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --text-color: #333;
+            --text-light: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Header */
+        .main-header {
+            background: linear-gradient(to right, white 0%, #f0f4ff 100%);
+            color: var(--dark-color);
+            padding: 0.5rem 0;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height:80px;
+            width:120px;
+            margin-right: 10px;
+        }
+        
+        .institution-name {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            margin-right: 10px;
+        }
+        
+        .header-phone i {
+            margin-right: 5px;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+        }
+        
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.6rem 0.9rem;
+            transition: var(--transition);
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-color);
+            background-color: rgba(10, 36, 99, 0.1);
+        }
+        
+        /* Compact Search and Buttons */
+        .search-form {
+            display: flex;
+            width: 160px;
+        }
+        
+        .search-input {
+            border-radius: 20px 0 0 20px;
+            border: 1px solid var(--primary-color);
+            border-right: none;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            height: 30px;
+        }
+        
+        .search-btn {
+            border-radius: 0 20px 20px 0;
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+            border: 1px solid var(--primary-color);
+            padding: 0 0.5rem;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-compact {
+            padding: 0.25rem 0.6rem;
+            font-size: 0.8rem;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Button Styles */
+        .btn-outline-primary {
+            color: var(--accent-color);
+            border-color: var(--primary-color);
+            background-color: transparent;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.8)), url('logo/scholar.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 1.8rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-hero {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.7rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .btn-hero:hover {
+            background-color: #e6c200;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Courses Section */
+        .courses-section {
+            padding: 3.5rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+        
+        .course-card {
+            border: none;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            margin-bottom: 1.8rem;
+            background-color: var(--light-color);
+            border: 1px solid rgba(10, 36, 99, 0.1);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+            border-color: var(--accent-color);
+        }
+        
+        .course-img {
+            height: 160px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .course-body {
+            padding: 1.3rem;
+        }
+        
+        .course-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--primary-color);
+        }
+        
+        .course-description {
+            color: var(--text-light);
+            margin-bottom: 1.1rem;
+            font-size: 0.9rem;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.8rem;
+        }
+        
+        .course-category {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        
+        .course-price {
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .btn-enroll {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+            border: none;
+            padding: 0.4rem 1.1rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+        }
+        
+        .btn-enroll:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* View All Courses Button */
+        .btn-outline-primary.btn-lg {
+            border-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-outline-primary.btn-lg:hover {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+        
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 40%, var(--accent-color) 100%);
+            padding: 1.8rem;
+            border-radius: var(--border-radius);
+            color: white;
+            margin: 1.8rem 0;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .promo-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.9rem;
+            color: var(--accent-color);
+        }
+        
+        .promo-text {
+            font-size: 1rem;
+            margin-bottom: 1.3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+        }
+        
+        /* About/Train With Us Section */
+        .about-section {
+            padding: 3.5rem 0;
+            background-color: #f8fafc;
+        }
+        
+        .about-column {
+            padding: 1.8rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            height: 100%;
+            border: 1px solid rgba(10, 36, 99, 0.1);
+        }
+        
+        .about-title {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.3rem;
+            position: relative;
+            padding-bottom: 0.6rem;
+        }
+        
+        .about-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .about-text {
+            margin-bottom: 1.3rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.9rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 3.5rem 0;
+            background-color: white;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-color);
+            padding: 1.8rem;
+            border-radius: var(--border-radius);
+            margin: 0.9rem;
+            position: relative;
+            border: 1px solid rgba(10, 36, 99, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.3rem;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 3.5rem;
+            color: rgba(10, 36, 99, 0.1);
+            position: absolute;
+            top: -1.2rem;
+            left: -0.8rem;
+            line-height: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 0.9rem;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+        
+        .author-title {
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.3rem;
+        }
+        
+        .cta-text {
+            font-size: 1.05rem;
+            margin-bottom: 1.8rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-cta {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.7rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .btn-cta:hover {
+            background-color: #DAA520;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        .main-footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2.5rem 0 1rem;
+        }
+        
+        .footer-logo {
+            height: 130px;
+            width: 160px;
+            margin-bottom: 1.3rem;
+        }
+        
+        .footer-about {
+            margin-bottom: 1.3rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-title {
+            font-size: 1.15rem;
+            margin-bottom: 1.3rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1.3rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.3rem;
+            margin-top: 1.8rem;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+        
+        .nav-menu .nav-button {
+            display: none;
+        }
+        
+        .nav-menu .btn {
+            width: 100%;
+            text-align: left;
+            justify-content: flex-start;
+            margin: 0.5rem 1.5rem;
+            width: calc(100% - 3rem);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 991.98px) {
+            .header-top-row {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                order: 2;
+            }
+            
+            .main-nav {
+                width: 100%;
+                order: 3;
+            }
+            
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                z-index: 999;
+                padding: 0.5rem 0;
+                margin-top: 0;
+            }
+            
+            .nav-menu .nav-button {
+                display: block;
+            }
+            
+            .header-actions .btn-compact {
+                display: none;
+            }
+            
+            .nav-menu.show {
+                display: flex;
+            }
+            
+            .nav-item {
+                width: 100%;
+                margin: 0;
+            }
+            
+            .nav-link {
+                padding: 0.8rem 1.5rem;
+                border-bottom: 1px solid rgba(10, 36, 99, 0.1);
+                width: 100%;
+                text-align: left;
+            }
+            
+            .header-actions {
+                order: 3;
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: 0.5rem;
+            }
+            
+            .search-form {
+                flex-grow: 1;
+                max-width: 200px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            .promo-title {
+                font-size: 1.3rem;
+            }
+            
+            .cta-title {
+                font-size: 1.5rem;
+            }
+            
+            .header-phone {
+                display: none;
+            }
+            
+            .logo-img {
+                height: 45px;
+                width: 55px;
+            }
+            
+            .institution-name {
+                font-size: 1.1rem;
+            }
+            
+            .nav-item {
+                margin: 0;
+            }
+            
+            .nav-link {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.85rem;
+            }
+            
+            .btn-compact, .search-input, .search-btn {
+                height: 28px;
+                font-size: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .header-actions {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+            
+            .search-form {
+                order: -1;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            
+            .btn-compact {
+                padding: 0.2rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-top-row">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="logo/logo1-nbg.png" alt="KONASAL Logo" class="logo-img">
+                        </a>
+                        
+                    </div>
+                    
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <div class="header-actions">
+                        <nav class="main-nav" id="mainNav">
+                    <ul class="nav-menu" id="navMenu">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="courses.html">Career Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about%20us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item nav-button">
+                            <button id="loginBtn" class="btn btn-outline-primary">
+                                <i class="fas fa-sign-in-alt me-1"></i>Login
+                            </button>
+                        </li>
+                        <li class="nav-item nav-button">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-user-plus me-1"></i>Register
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                        
+                        
+                        
+                        <button id="loginBtnDesktop" class="btn btn-outline-primary btn-compact">
+                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </button>
+                        <button class="btn btn-primary btn-compact">
+                            <i class="fas fa-user-plus me-1"></i>Register
+                        </button>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Launch Your Dream Career with Professional Training</h1>
+            <p class="hero-subtitle">Get job-ready with our industry-aligned career courses and expert instructors.</p>
+            <a href="courses.html" class="btn btn-hero">
+                <i class="fas fa-book-open me-2"></i>Explore Career Courses
+            </a>
+        </div>
+    </section>
+    
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <h2 class="section-title">Hot Career Courses in 2025</h2>
+            
+            <div class="row">
+                <!-- Course 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <img src="logo/cybersecurity.PNG" class="course-img" alt="Cyber Security">
+                        <div class="course-body">
+                            <h3 class="course-title">Cyber Security Career Program</h3>
+                            <p class="course-description">Become a security expert with hands-on training in ethical hacking and network defense.</p>
+                            <div class="course-meta">
+                                <span class="course-category">Cyber Security</span>
+                                <span class="course-price">$199</span>
+                            </div>
+                            <button class="btn btn-enroll">
+                                <i class="fas fa-plus-circle me-2"></i>Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <img src="logo/cloudcomputing.PNG" class="course-img" alt="Cloud Computing">
+                        <div class="course-body">
+                            <h3 class="course-title">Cloud Engineer Career Track</h3>
+                            <p class="course-description">Master cloud technologies and deploy scalable applications on Amazon Web Services.</p>
+                            <div class="course-meta">
+                                <span class="course-category">Cloud Computing</span>
+                                <span class="course-price">$249</span>
+                            </div>
+                            <button class="btn btn-enroll">
+                                <i class="fas fa-plus-circle me-2"></i>Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <img src="logo/data%20science.PNG" class="course-img" alt="Data Science">
+                        <div class="course-body">
+                            <h3 class="course-title">Data Science Career Bootcamp</h3>
+                            <p class="course-description">Become a data expert with Python, machine learning, and data visualization techniques.</p>
+                            <div class="course-meta">
+                                <span class="course-category">Data Science</span>
+                                <span class="course-price">$299</span>
+                            </div>
+                            <button class="btn btn-enroll">
+                                <i class="fas fa-plus-circle me-2" ></i>Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="courses.html" class="btn btn-outline-primary btn-lg">  
+                    <i class="fas fa-book me-2"></i>View All Career Courses
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Promo Banner -->
+    <section class="container">
+        <div class="promo-banner">
+            <h3 class="promo-title">Limited Time Offer: 30% Off All Career Courses!</h3>
+            <p class="promo-text">Register today and get instant access to all our career-focused programs at a discounted price. Offer valid until December 31, 2025.</p>
+            <a href="courses.html" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-gift me-2"></i>Explore More Courses
+            </a>
+        </div>
+    </section>
+    
+    <!-- About/Train With Us Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-column">
+                        <h2 class="about-title">Who We Are?</h2>
+                        <p class="about-text">Konasal Training Institute is a premier career-focused education provider dedicated to helping students launch successful careers in technology and beyond. Founded in 2010, we've helped over 10,000 graduates transition into rewarding careers.</p>
+                        <p class="about-text">Our mission is to bridge the gap between education and employment by providing industry-relevant training that equips students with the skills employers demand.</p>
+                        <ul class="feature-list">
+                            <li>15+ years of excellence in career education</li>
+                            <li>Industry-recognized certification programs</li>
+                            <li>Hands-on, project-based learning approach</li>
+                            <li>Strong partnerships with leading employers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-column">
+                        <h2 class="about-title">Why Train With Us?</h2>
+                        <p class="about-text">At Konasal, we go beyond traditional education to provide career-transforming experiences that lead to real job opportunities.</p>
+                        <ul class="feature-list">
+                            <li><strong>Industry Expert Instructors:</strong> Learn from professionals with real-world experience in their fields</li>
+                            <li><strong>Career Services:</strong> Resume help, interview prep, and job placement assistance</li>
+                            <li><strong>Career-Ready Certificates:</strong> Earn recognized credentials to boost your job prospects</li>
+                            <li><strong>Flexible Learning Options:</strong> Choose from full-time, part-time, or online programs</li>
+                            <li><strong>Job Placement Support:</strong> 85% of our graduates find jobs within 3 months</li>
+                            <li><strong>Alumni Network:</strong> Join a community of over 10,000 professionals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Career Success Stories</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">The Cyber Security Career Program completely transformed my professional life. I went from an IT support role to a security analyst position within 3 months.</p>
+                        <div class="testimonial-author">
+                            <img src="imag/blog-2.jpg" class="author-img" alt="John D.">
+                            <div>
+                                <h4 class="author-name">John D.</h4>
+                                <p class="author-title">Security Analyst at TechSecure</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Thanks to the Cloud Engineer Career Track, I landed my dream job at a major tech company with a 40% salary increase!</p>
+                        <div class="testimonial-author">
+                            <img src="images/course-2.jpg" class="author-img" alt="Sarah M.">
+                            <div>
+                                <h4 class="author-name">Sarah M.</h4>
+                                <p class="author-title">Cloud Engineer at DataCloud</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Career?</h2>
+            <p class="cta-text">Join thousands of professionals who have launched successful careers with our training programs. Register today!</p>
+            <a href="courses.html" class="btn btn-cta">
+                <i class="fas fa-user-graduate me-2"></i>Start Your Career Journey
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="index.html">
+                        <img src="logo/blackgold%20png.png" alt="KONASAL Logo" class="footer-logo">
+                    </a>
+                    <p class="footer-about">Konasal Training Institute provides career-focused education to help students launch successful careers in technology and beyond.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about%20us.html">About Us</a></li>
+                        <li><a href="courses.html">Career Courses</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Career Guides</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Education Street, Tech City, TC 10101</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@konasal.edu</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Konasal Training Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+   
+    
+    <!-- jQuery & Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            // Change icon based on menu state
+            const icon = mobileMenuToggle.querySelector('i');
+            if (navMenu.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('#mobileMenuToggle') && 
+                !event.target.closest('#navMenu') && 
+                navMenu.classList.contains('show')) {
+                navMenu.classList.remove('show');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close menu when window is resized to desktop size
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 991) {
+                navMenu.classList.remove('show');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Login Modal Functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+        const loginModal = document.createElement('div');
+        
+        loginModal.innerHTML = `
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Login to Your Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="loginEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="loginPassword" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Login</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <a href="#" class="text-decoration-none">Forgot password?</a>
+                                <p class="mt-2">Don't have an account? <a href="#" class="text-decoration-none">Register here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(loginModal);
+        
+        loginBtn.addEventListener('click', () => {
+            const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+            modal.show();
+        });
+        
+        loginBtnDesktop.addEventListener('click', () => {
+            const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+            modal.show();
+        });
+        
+   
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

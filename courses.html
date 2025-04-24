@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KONASAL TRAINING INSTITUTE - All Courses</title>
+    
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #0a2463; /* Navy Blue */
+            --secondary-color: #001845;
+            --accent-color: #DAA520; /* Gold */
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --text-color: #333;
+            --text-light: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .dark-mode {
+            background-color: #121212;
+            color: #f8f9fa;
+        }
+        
+        /* Header */
+        .main-header {
+            background: linear-gradient(to right, white 0%, #f0f4ff 100%);
+            color: var(--dark-color);
+            padding: 0.5rem 0;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .dark-mode .main-header {
+            background: linear-gradient(to right, #121212 0%, #1a1a2e 100%);
+            color: #f8f9fa;
+        }
+        
+        .header-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 80px;
+            width: 120px;
+            margin-right: 10px;
+        }
+        
+        .institution-name {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .dark-mode .institution-name {
+            color: var(--accent-color);
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            margin-right: 10px;
+        }
+        
+        .dark-mode .header-phone {
+            color: var(--accent-color);
+        }
+        
+        .header-phone i {
+            margin-right: 5px;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+        }
+        
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0.6rem 0.9rem;
+            transition: var(--transition);
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+        
+        .dark-mode .nav-link {
+            color: var(--accent-color);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-color);
+            background-color: rgba(10, 36, 99, 0.1);
+        }
+        
+        .dark-mode .nav-link:hover, 
+        .dark-mode .nav-link.active {
+            background-color: rgba(218, 165, 32, 0.2);
+        }
+        
+        /* Search and Buttons */
+        .search-form {
+            display: flex;
+            width: 160px;
+        }
+        
+        .search-input {
+            border-radius: 20px 0 0 20px;
+            border: 1px solid var(--primary-color);
+            border-right: none;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            height: 30px;
+        }
+        
+        .dark-mode .search-input {
+            background-color: #333;
+            color: #f8f9fa;
+            border-color: var(--accent-color);
+        }
+        
+        .search-btn {
+            border-radius: 0 20px 20px 0;
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+            border: 1px solid var(--primary-color);
+            padding: 0 0.5rem;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .dark-mode .search-btn {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border-color: var(--accent-color);
+        }
+        
+        .btn-compact {
+            padding: 0.25rem 0.6rem;
+            font-size: 0.8rem;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Button Styles */
+        .btn-outline-primary {
+            color: var(--accent-color);
+            border-color: var(--primary-color);
+            background-color: transparent;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+        
+        .dark-mode .btn-outline-primary {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .dark-mode .btn-outline-primary:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--accent-color);
+        }
+        
+        .dark-mode .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+        
+        .dark-mode .btn-primary:hover {
+            background-color: #e6c200;
+            border-color: #e6c200;
+        }
+        
+        /* Main Content Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .dark-mode .container {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        /* Course Section */
+        .course-section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--primary-color);
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+        
+        .dark-mode .section-title {
+            color: var(--accent-color);
+        }
+        
+        /* Filter Section */
+        .filter-section {
+            padding: 15px;
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+        }
+        
+        .dark-mode .filter-section {
+            background: #2c2c2c;
+        }
+        
+        /* Filter Section Labels */
+        .filter-section .form-label {
+            color: #DAA520;
+            font-weight: 500;
+        }
+        
+        .dark-mode .filter-section .form-label {
+            color: #DAA520;
+        }
+        
+        /* Course Cards */
+        .course-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid rgba(10, 36, 99, 0.1);
+        }
+        
+        .dark-mode .course-card {
+            background: #333;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            border-color: rgba(218, 165, 32, 0.2);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .course-image-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            border: 2px solid rgba(10, 36, 99, 0.1);
+        }
+        
+        .dark-mode .course-image {
+            border-color: rgba(218, 165, 32, 0.2);
+        }
+        
+        .course-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .course-title:hover {
+            color: var(--accent-color);
+        }
+        
+        .dark-mode .course-title {
+            color: var(--accent-color);
+        }
+        
+        .course-category {
+            display: inline-block;
+            background: rgba(10, 36, 99, 0.1);
+            color: var(--primary-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+        
+        .dark-mode .course-category {
+            background: rgba(218, 165, 32, 0.2);
+            color: var(--accent-color);
+        }
+        
+        .course-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .course-card li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .dark-mode .course-card li {
+            color: #e0e0e0;
+        }
+        
+        /* No Results */
+        .no-results {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        .dark-mode .no-results {
+            background: #2c2c2c;
+        }
+        
+        /* Footer */
+        .main-footer {
+            background-color: var(--primary-color);
+            color: #0a2463;
+            padding: 2.5rem 0 1rem;
+        }
+        
+        .footer-logo {
+            height: 100px;
+            width: 160px;
+            margin-bottom: 1.3rem;
+        }
+        
+        .footer-about {
+            margin-bottom: 1.3rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-title {
+            font-size: 1.15rem;
+            margin-bottom: 1.3rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+        
+        .footer-links a {
+            color: #0a2463;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1.3rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: #0a2463;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.3rem;
+            margin-top: 1.8rem;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 991.98px) {
+            .header-top-row {
+                flex-wrap: wrap;
+            }
+            
+            .header-actions {
+                order: 3;
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: 0.5rem;
+            }
+            
+            .search-form {
+                flex-grow: 1;
+                max-width: 200px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            .header-phone {
+                display: none;
+            }
+            
+            .logo-img {
+                height: 60px;
+                width: 80px;
+            }
+            
+            .institution-name {
+                font-size: 1.1rem;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-item {
+                margin: 0.2rem;
+            }
+            
+            .nav-link {
+                padding: 0.5rem 0.7rem;
+                font-size: 0.85rem;
+            }
+            
+            .btn-compact, .search-input, .search-btn {
+                height: 28px;
+                font-size: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .header-actions {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+            
+            .search-form {
+                order: -1;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            
+            .btn-compact {
+                padding: 0.2rem 0.5rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo/logo1.PNG" alt="KONASAL Logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="courses.html">Career Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about%20us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <button id="loginBtn" class="btn btn-outline-primary btn-compact me-2">
+                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </button>
+                        <button class="btn btn-primary btn-compact">
+                            <i class="fas fa-user-plus me-1"></i>Register
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- <header class="main-header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-top-row">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="logo/logo1.PNG" alt="KONASAL Logo" class="logo-img">
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="header-actions">
+                        <nav class="main-nav" id="mainNav">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="courses.html">Career Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about%20us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                        
+                            
+                        
+                        <button id="loginBtn" class="btn btn-outline-primary btn-compact">
+                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </button>
+                        <button class="btn btn-primary btn-compact">
+                            <i class="fas fa-user-plus me-1"></i>Register
+                        </button>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </header> -->
+    <!-- Main Content -->
+    <div class="container" >
+        <div class="course-section">
+            <h2 class="section-title">All Career Courses</h2>
+            
+            <div class="filter-section" style="background: #0a2463">
+                <div class="row g-3">
+                    <div class="col-12 col-md-8">
+                        <label for="courseSearch" class="form-label">Search Courses</label>
+                        <input type="text" id="courseSearch" class="form-control" 
+                               placeholder="Search by name, description...">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <label for="courseFilter" class="form-label">Filter by Category</label>
+                        <select id="courseFilter" class="form-select">
+                            <option value="all">All Categories</option>
+                            <option value="AI">Artificial Intelligence</option>
+                             <option value="Cloud Computing">Cloud Computing</option>
+                            <option value="Cyber Security">Cyber Security</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Research">Research</option>
+                             <option value="Testing">Testing</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-results" id="noResults">
+                <i class="fas fa-search fa-lg mb-3"></i>
+                <h4>No courses found</h4>
+                <p>Try adjusting your search criteria</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="courseList"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="index.html">
+                        <img src="logo/logo1.PNG" alt="KONASAL Logo" class="footer-logo">
+                    </a>
+                    <p class="footer-about">Konasal Training Institute provides career-focused education to help students launch successful careers in technology and beyond.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about%20us.html">About Us</a></li>
+                        <li><a href="courses.html">Career Courses</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Career Guides</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Education Street, Tech City, TC 10101</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@konasal.edu</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Konasal Training Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                        <p class="mt-2">Don't have an account? <a href="#" class="text-decoration-none">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery & Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Course Data - Sorted alphabetically by title
+const courses = [
+    {
+        title: "Agentic AI",
+        category: "AI",
+        image: "logo/agentic-ai.png",
+        description: "Learn about autonomous AI agents and their implementations.",
+        subCourses: ["Autonomous Decision Making", "Multi-agent Systems", "Reinforcement Learning"],
+        page: "agentic-ai.html"
+    },
+    {
+        title: "Azure",
+        category: "Cloud Computing",
+        image: "logo/azure.png",
+        description: "Microsoft Azure cloud platform training and certification preparation.",
+        subCourses: ["ARM Templates", "Azure AD", "Azure Functions", "Azure VMs"],
+        page: "azure.html"
+    },
+    {
+        title: "Clinical Research",
+        category: "Research",
+        image: "logo/clinical-research.png",
+        description: "Fundamentals of clinical research methodology and regulations.",
+        subCourses: ["Data Collection", "Protocol Development", "Regulatory Compliance"],
+        page: "clinical-research.html"
+    },
+    {
+        title: "Cybersecurity Analysis",
+        category: "Cyber Security",
+        image: "logo/cyber-analysis.jpg",
+        description: "Develop skills to analyze and respond to cybersecurity threats.",
+        subCourses: ["Incident Response", "SIEM Tools", "Threat Intelligence"],
+        page: "cybersecurity-analysis.html"
+    },
+    {
+        title: "DevOps",
+        category: "Cloud Computing",
+        image: "logo/devops.png",
+        description: "Learn DevOps practices for continuous integration and delivery.",
+        subCourses: ["CI/CD Pipelines", "Docker", "Infrastructure as Code", "Kubernetes"],
+        page: "devops.html"
+    },
+    {
+        title: "Ethical Hacking",
+        category: "Cyber Security",
+        image: "logo/ethical.jpg",
+        description: "Learn how to hack ethically and secure systems from vulnerabilities.",
+        subCourses: ["Kali Linux", "Vulnerability Assessment", "Wi-Fi Security"],
+        page: "ethical-hacking.html"
+    },
+    {
+        title: "GenAI",
+        category: "AI",
+        image: "logo/genai.png",
+        description: "Explore Generative AI technologies and applications.",
+        subCourses: ["Creative Applications", "Diffusion Models", "GANs", "LLMs"],
+        page: "genai.html"
+    },
+    {
+        title: "Master AWS",
+        category: "Cloud Computing",
+        image: "logo/aws.jpg",
+        description: "Comprehensive AWS training from fundamentals to advanced solutions.",
+        subCourses: ["CloudFormation", "EC2", "Lambda", "S3"],
+        page: "master-aws.html"
+    },
+    {
+        title: "Network Security",
+        category: "Cyber Security",
+        image: "logo/networ.png",
+        description: "Protect networks from cyber threats with advanced security techniques.",
+        subCourses: ["Firewall Protection", "Network Monitoring", "Penetration Testing"],
+        page: "network-security.html"
+    },
+    {
+        title: "Penetration Testing",
+        category: "Cyber Security",
+        image: "logo/penetration.jpg",
+        description: "Master the art of penetration testing to identify system vulnerabilities.",
+        subCourses: ["Metasploit Framework", "OWASP Top 10", "Security Assessment"],
+        page: "penetration-testing.html"
+    },
+    {
+        title: "Python for Data Science",
+        category: "Data Science",
+        image: "logo/python-ds.jpg",
+        description: "Master Python programming for data analysis and visualization.",
+        subCourses: ["Matplotlib", "NumPy", "Pandas", "Seaborn"],
+        page: "python-data-science.html"
+    },
+    {
+        title: "QA Testing",
+        category: "Testing",
+        image: "logo/qa-testing.jpg",
+        description: "Quality assurance testing methodologies and best practices.",
+        subCourses: ["Automation", "Bug Tracking", "Regression Testing", "Test Cases"],
+        page: "qa-testing.html"
+    },
+    {
+        title: "SAP Security/GRC AC 12.0,12.1 & S4 Hana",
+        category: "Cyber Security",
+        image: "logo/sap-security.png",
+        description: "Specialized training in SAP Security and Governance, Risk, and Compliance.",
+        subCourses: ["Access Control", "Risk Management", "S4 Hana Security"],
+        page: "sap-security.html"
+    },
+    {
+        title: "SAP Testing",
+        category: "Testing",
+        image: "logo/sap-testing.png",
+        description: "Specialized testing for SAP applications and modules.",
+        subCourses: ["Integration Testing", "Performance Testing", "Unit Testing"],
+        page: "sap-testing.html"
+    },
+    {
+        title: "SQL for Data Analysis",
+        category: "Data Science",
+        image: "logo/sql.png",
+        description: "Learn SQL for efficient data querying and analysis.",
+        subCourses: ["Query Optimization", "Stored Procedures", "Window Functions"],
+        page: "sql-data-analysis.html"
+    },
+    {
+        title: "Tableau and Power BI",
+        category: "Data Science",
+        image: "logo/tableau-powerbi.png",
+        description: "Data visualization with Tableau and Power BI tools.",
+        subCourses: ["Dashboards", "Data Modeling", "Visual Analytics"],
+        page: "tableau-powerbi.html"
+    }
+];
+
+// Sort the courses array alphabetically by title
+courses.sort((a, b) => a.title.localeCompare(b.title));
+
+// Sort subCourses arrays for each course
+courses.forEach(course => {
+    course.subCourses.sort((a, b) => a.localeCompare(b));
+});
+        // Load Courses
+        function loadCourses() {
+            const courseList = document.getElementById('courseList');
+            courseList.innerHTML = '';
+            
+            if (courses.length === 0) {
+                document.getElementById('noResults').style.display = 'block';
+                return;
+            }
+            
+            courses.forEach(course => {
+                const subCoursesHTML = course.subCourses.map(sub => `<li>${sub}</li>`).join("");
+                
+                const col = document.createElement('div');
+                col.className = 'col';
+                
+                col.innerHTML = `
+                    <div class="course-card" data-category="${course.category}" 
+                         data-search="${course.title.toLowerCase()} ${course.description.toLowerCase()} ${course.category.toLowerCase()}">
+                        <div class="course-image-container">
+                            <a href="${course.page}">
+                                <img src="${course.image}" alt="${course.title}" class="course-image">
+                            </a>
+                        </div>
+                        <a href="${course.page}" class="course-title">${course.title}</a>
+                        <span class="course-category">${course.category}</span>
+                        <p>${course.description}</p>
+                        <ul>${subCoursesHTML}</ul>
+                    </div>
+                `;
+                
+                courseList.appendChild(col);
+            });
+        }
+
+        // Filter Courses
+        function filterCourses() {
+            const searchTerm = document.getElementById('courseSearch').value.toLowerCase();
+            const categoryFilter = document.getElementById('courseFilter').value;
+            const courseCards = document.querySelectorAll('.course-card');
+            let visibleCount = 0;
+            
+            courseCards.forEach(card => {
+                const matchesSearch = card.dataset.search.includes(searchTerm);
+                const matchesCategory = categoryFilter === 'all' || card.dataset.category === categoryFilter;
+                
+                if (matchesSearch && matchesCategory) {
+                    card.parentElement.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCourses();
+            
+            document.getElementById('courseSearch').addEventListener('input', filterCourses);
+            document.getElementById('courseFilter').addEventListener('change', filterCourses);
+            
+            // Dark Mode Toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const darkModeIcon = darkModeToggle.querySelector('i');
+            
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                
+                if (document.body.classList.contains('dark-mode')) {
+                    darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    darkModeIcon.classList.replace('fa-sun', 'fa-moon');
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            });
+            
+            // Check for saved preference
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+            
+            // Login Modal
+            const loginBtn = document.getElementById('loginBtn');
+            loginBtn.addEventListener('click', () => {
+                const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                loginModal.show();
+            });
+            
+            // Login Form Submission
+            document.getElementById('loginForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Login functionality would be implemented here. This is just a demo.');
+                const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+                loginModal.hide();
+            });
+        });
+    </script>
+</body>
+</html>
