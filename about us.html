@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KONASAL TRAINING INSTITUTE - About Us</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Bootstrap & FontAwesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
         :root {
-            --primary-color: #0a2463; /* Navy Blue */
+            --primary-color: #0a2463;
+            /* Navy Blue */
             --secondary-color: #001845;
-            --accent-color: #DAA520; /* Gold */
+            --accent-color: #DAA520;
+            /* Gold */
             --light-color: #f8f9fa;
             --dark-color: #212529;
             --success-color: #4caf50;
@@ -24,10 +29,10 @@
             --text-color: #333;
             --text-light: #6c757d;
             --border-radius: 8px;
-            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
-        
+
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #f5f7fa;
@@ -35,12 +40,17 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
-        
+
         /* Header */
         .main-header {
             background: linear-gradient(to right, white 0%, #f0f4ff 100%);
@@ -49,46 +59,46 @@
             box-shadow: var(--box-shadow);
             position: relative;
             z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
-        
+
         .header-container {
             display: flex;
             flex-direction: column;
         }
-        
+
         .header-top-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 0.5rem;
         }
-        
+
         .logo-container {
             display: flex;
             align-items: center;
         }
-        
+
         .logo-img {
             height: 80px;
             width: 120px;
             margin-right: 10px;
             object-fit: contain;
         }
-        
+
         .institution-name {
             font-size: 1.2rem;
             margin: 0;
             font-weight: 700;
             color: var(--primary-color);
         }
-        
+
         .header-actions {
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        
+
         .header-phone {
             display: flex;
             align-items: center;
@@ -97,31 +107,31 @@
             font-size: 0.85rem;
             margin-right: 10px;
         }
-        
+
         .header-phone i {
             margin-right: 5px;
             font-size: 0.85rem;
             color: var(--accent-color);
         }
-        
+
         /* Navigation */
         .main-nav {
             display: flex;
             justify-content: center;
             width: 100%;
         }
-        
+
         .nav-menu {
             display: flex;
             list-style: none;
             margin: 0 auto;
             padding: 0;
         }
-        
+
         .nav-item {
             position: relative;
         }
-        
+
         .nav-link {
             color: var(--primary-color);
             font-weight: 500;
@@ -131,12 +141,13 @@
             display: block;
             font-size: 0.9rem;
         }
-        
-        .nav-link:hover, .nav-link.active {
+
+        .nav-link:hover,
+        .nav-link.active {
             color: var(--accent-color);
             background-color: rgba(10, 36, 99, 0.1);
         }
-        
+
         /* Page Title */
         .page-title-section {
             background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.8)), url('logo/scholar.PNG');
@@ -147,54 +158,54 @@
             text-align: center;
             position: relative;
         }
-        
+
         .page-title {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
-        
+
         .breadcrumb {
             display: flex;
             justify-content: center;
             list-style: none;
             padding: 0;
-            background-color: rgba(0,0,0,0.3);
+            background-color: rgba(0, 0, 0, 0.3);
             border-radius: 50px;
             padding: 0.5rem 1rem;
             display: inline-flex;
         }
-        
+
         .breadcrumb-item a {
             color: var(--accent-color);
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         .breadcrumb-item.active {
             color: white;
         }
-        
-        .breadcrumb-item + .breadcrumb-item::before {
+
+        .breadcrumb-item+.breadcrumb-item::before {
             content: ">";
             color: white;
             padding: 0 0.5rem;
         }
-        
+
         /* About Section */
         .about-section {
             padding: 5rem 0;
             background-color: white;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
             color: var(--primary-color);
             position: relative;
         }
-        
+
         .section-title:after {
             content: '';
             display: block;
@@ -204,17 +215,17 @@
             margin: 1rem auto 0;
             border-radius: 2px;
         }
-        
+
         .about-content {
             margin-bottom: 2rem;
             padding-right: 2rem;
         }
-        
+
         .about-content p {
             margin-bottom: 1.5rem;
             font-size: 1.05rem;
         }
-        
+
         .about-image {
             border-radius: var(--border-radius);
             overflow: hidden;
@@ -222,24 +233,24 @@
             height: 100%;
             min-height: 350px;
         }
-        
+
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .about-image:hover img {
             transform: scale(1.03);
         }
-        
+
         /* Values Section */
         .values-section {
             padding: 5rem 0;
             background-color: #f8fafc;
         }
-        
+
         .value-card {
             background-color: white;
             border-radius: var(--border-radius);
@@ -251,12 +262,12 @@
             transition: var(--transition);
             height: 100%;
         }
-        
+
         .value-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .value-icon {
             font-size: 2.5rem;
             color: var(--accent-color);
@@ -269,12 +280,12 @@
             justify-content: center;
             border-radius: 50%;
         }
-        
+
         .value-card h3 {
             margin-bottom: 1rem;
             color: var(--primary-color);
         }
-        
+
         /* Stats Section */
         .stats-section {
             padding: 5rem 0;
@@ -283,7 +294,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .stats-section::before {
             content: '';
             position: absolute;
@@ -295,18 +306,18 @@
             opacity: 0.1;
             z-index: 0;
         }
-        
+
         .stat-item {
             text-align: center;
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
             padding: 1.5rem;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius);
             backdrop-filter: blur(5px);
         }
-        
+
         .stat-number {
             font-size: 3rem;
             font-weight: 700;
@@ -314,18 +325,18 @@
             margin-bottom: 0.5rem;
             line-height: 1;
         }
-        
+
         .stat-label {
             font-size: 1.1rem;
             font-weight: 500;
         }
-        
+
         /* Team Section */
         .team-section {
             padding: 5rem 0;
             background-color: white;
         }
-        
+
         .team-card {
             background-color: var(--light-color);
             border-radius: var(--border-radius);
@@ -335,56 +346,77 @@
             transition: var(--transition);
             height: 100%;
         }
-        
+
         .team-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .team-image {
             height: 300px;
             overflow: hidden;
         }
-        
+
         .team-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .team-card:hover .team-image img {
             transform: scale(1.1);
         }
-        
+
         .team-info {
             padding: 2rem;
             text-align: center;
         }
-        
+
         .team-info h3 {
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-        
+
         .team-info .text-muted {
             color: var(--accent-color) !important;
             font-weight: 500;
             margin-bottom: 1rem;
             display: block;
         }
-        
+        .btn-compact {
+            padding: 0.25rem 0.6rem;
+            font-size: 0.8rem;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         /* Button Styles */
+        .btn-outline-primary {
+            color: var(--accent-color);
+            border-color: var(--primary-color);
+            background-color: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+
         .btn-primary {
-            background-color: #0a2463;
-            border-color: #0a2463;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--accent-color);
         }
-        
+
         .btn-primary:hover {
-            background-color: #001845;
-            border-color: #001845;
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--accent-color);
         }
-        
+
         /* CTA Section */
         .cta-section {
             padding: 6rem 0;
@@ -394,7 +426,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .cta-section::before {
             content: '';
             position: absolute;
@@ -406,14 +438,14 @@
             opacity: 0.1;
             z-index: 0;
         }
-        
+
         .cta-title {
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
         }
-        
+
         .cta-section p {
             font-size: 1.1rem;
             max-width: 700px;
@@ -421,7 +453,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .btn-cta {
             background-color: var(--accent-color);
             color: var(--primary-color);
@@ -435,13 +467,13 @@
             z-index: 1;
             box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
         }
-        
+
         .btn-cta:hover {
             background-color: #e6c200;
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(218, 165, 32, 0.4);
         }
-        
+
         /* Footer */
         .main-footer {
             background-color: var(--primary-color);
@@ -449,14 +481,14 @@
             padding: 4rem 0 1.5rem;
             position: relative;
         }
-        
+
         .footer-logo {
             height: 130px;
             width: 160px;
             margin-bottom: 1.5rem;
             object-fit: contain;
         }
-        
+
         .footer-title {
             font-size: 1.25rem;
             margin-bottom: 1.5rem;
@@ -465,7 +497,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .footer-title::after {
             content: '';
             position: absolute;
@@ -475,77 +507,77 @@
             height: 2px;
             background-color: var(--accent-color);
         }
-        
+
         .footer-links {
             list-style: none;
             padding: 0;
             font-size: 0.95rem;
         }
-        
+
         .footer-links li {
             margin-bottom: 0.8rem;
         }
-        
+
         .footer-links a {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             transition: var(--transition);
             text-decoration: none;
             display: inline-block;
         }
-        
+
         .footer-links a:hover {
             color: var(--accent-color);
             transform: translateX(5px);
         }
-        
+
         .contact-info li {
             margin-bottom: 1rem;
             display: flex;
             align-items: flex-start;
         }
-        
+
         .contact-info i {
             margin-right: 10px;
             color: var(--accent-color);
             margin-top: 3px;
         }
-        
+
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
+
         .social-link {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             color: white;
             transition: var(--transition);
             font-size: 1rem;
         }
-        
+
         .social-link:hover {
             background-color: var(--accent-color);
             color: var(--primary-color);
             transform: translateY(-5px);
         }
-        
+
         .newsletter-form .form-control {
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             border: none;
             color: white;
             height: 45px;
         }
-        
+
         .newsletter-form .form-control::placeholder {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
         }
-        
+
         .newsletter-form .btn {
             background-color: var(--accent-color);
             color: var(--primary-color);
@@ -555,111 +587,251 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 1.5rem;
             margin-top: 3rem;
             text-align: center;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
         }
-        
+
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1000;
+        }
+
+        .nav-menu .nav-button {
+            display: none;
+        }
+
+        .nav-menu .btn {
+            width: 100%;
+            text-align: left;
+            justify-content: flex-start;
+            margin: 0.5rem 1.5rem;
+            width: calc(100% - 3rem);
+        }
+
         /* Responsive Styles */
         @media (max-width: 991.98px) {
             .header-top-row {
                 flex-wrap: wrap;
+                justify-content: space-between;
             }
-            
+
+            .mobile-menu-toggle {
+                display: block;
+                order: 2;
+            }
+
+            .main-nav {
+                width: 100%;
+                order: 3;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                padding: 0.5rem 0;
+                margin-top: 0;
+            }
+
+            .nav-menu .nav-button {
+                display: block;
+            }
+
+            .header-actions .btn-compact {
+                display: none;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .nav-item {
+                width: 100%;
+                margin: 0;
+            }
+
+            .nav-link {
+                padding: 0.8rem 1.5rem;
+                border-bottom: 1px solid rgba(10, 36, 99, 0.1);
+                width: 100%;
+                text-align: left;
+            }
+
             .header-actions {
                 order: 3;
                 width: 100%;
                 justify-content: flex-end;
                 margin-top: 0.5rem;
             }
-            
+
             .about-content {
                 padding-right: 0;
                 margin-bottom: 2.5rem;
             }
         }
-        
+
         @media (max-width: 767.98px) {
             .page-title {
                 font-size: 2rem;
             }
-            
+
             .header-phone {
                 display: none;
             }
-            
+
             .logo-img {
                 height: 60px;
                 width: 80px;
             }
-            
+
             .institution-name {
                 font-size: 1.1rem;
             }
-            
+
             .nav-menu {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .nav-item {
                 margin: 0.2rem;
             }
-            
+
             .nav-link {
                 padding: 0.5rem 0.7rem;
                 font-size: 0.85rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
-            
+
             .stat-number {
                 font-size: 2.5rem;
             }
-            
+
             .cta-title {
                 font-size: 1.8rem;
             }
         }
-        
+
         @media (max-width: 575.98px) {
             .page-title-section {
                 padding: 4rem 0;
             }
-            
+
             .page-title {
                 font-size: 1.8rem;
             }
-            
+
             .breadcrumb {
                 flex-wrap: wrap;
                 justify-content: center;
                 padding: 0.5rem;
                 border-radius: var(--border-radius);
             }
-            
+
             .breadcrumb-item {
                 margin: 0.2rem;
             }
-            
-            .about-section, .values-section, 
-            .stats-section, .team-section, 
+
+            .about-section,
+            .values-section,
+            .stats-section,
+            .team-section,
             .cta-section {
                 padding: 3rem 0;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
-      <header class="main-header">
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-top-row">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="logo/logo1-nbg.png" alt="KONASAL Logo" class="logo-img">
+                        </a>
+
+                    </div>
+
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="header-actions">
+                        <nav class="main-nav" id="mainNav">
+                            <ul class="nav-menu" id="navMenu">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="courses.html">Career Courses</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about%20us.html">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Faculty</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                                <li class="nav-item nav-button">
+                                    <button id="loginBtn" class="btn-outline-primary btn">
+                                        <i class="me-1 fas fa-sign-in-alt"></i>Login
+                                    </button>
+                                </li>
+                                <li class="nav-item nav-button">
+                                    <button class="btn btn-primary">
+                                        <i class="me-1 fas fa-user-plus"></i>Register
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+
+
+
+                        <button id="loginBtnDesktop" class="btn-outline-primary btn btn-compact">
+                            <i class="me-1 fas fa-sign-in-alt"></i>Login
+                        </button>
+                        <button class="btn btn-primary btn-compact">
+                            <i class="me-1 fas fa-user-plus"></i>Register
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <!--  <header class="main-header">
         <div class="container">
             <div class="header-container">
                 <div class="header-top-row">
@@ -698,7 +870,7 @@
                 
             </div>
         </div>
-    </header>
+    </header> -->
     <!-- Page Title -->
     <section class="page-title-section">
         <div class="container">
@@ -709,25 +881,33 @@
             <h1 class="page-title">Konasal Training Institute</h1>
         </div>
     </section>
-    
+
     <!-- About Section -->
     <section class="about-section">
         <div class="container">
             <h2 class="section-title">Who We Are</h2>
-            
-            <div class="row align-items-center">
+
+            <div class="align-items-center row">
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <p>Konasal Training Institute is a premier career-focused education provider dedicated to helping students launch successful careers in technology and beyond. Founded in 2010, we've helped over 10,000 graduates transition into rewarding careers.</p>
-                        
-                        <p>Our mission is to bridge the gap between education and employment by providing industry-relevant training that equips students with the skills employers demand. We believe in practical, hands-on learning that prepares students for real-world challenges.</p>
-                        
-                        <p>With 15+ years of excellence in career education, we offer industry-recognized certification programs through a hands-on, project-based learning approach. We maintain strong partnerships with leading employers to ensure our graduates have the best job opportunities.</p>
-                        
-                        <p>Our modern campus features state-of-the-art labs and learning facilities, with small class sizes that ensure personalized attention for every student.</p>
+                        <p>Konasal Training Institute is a premier career-focused education provider dedicated to
+                            helping students launch successful careers in technology and beyond. Founded in 2010, we've
+                            helped over 10,000 graduates transition into rewarding careers.</p>
+
+                        <p>Our mission is to bridge the gap between education and employment by providing
+                            industry-relevant training that equips students with the skills employers demand. We believe
+                            in practical, hands-on learning that prepares students for real-world challenges.</p>
+
+                        <p>With 15+ years of excellence in career education, we offer industry-recognized certification
+                            programs through a hands-on, project-based learning approach. We maintain strong
+                            partnerships with leading employers to ensure our graduates have the best job opportunities.
+                        </p>
+
+                        <p>Our modern campus features state-of-the-art labs and learning facilities, with small class
+                            sizes that ensure personalized attention for every student.</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6">
                     <div class="about-image">
                         <img src="logo/training.jpg">
@@ -736,12 +916,12 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Values Section -->
     <section class="values-section">
         <div class="container">
             <h2 class="section-title">Our Core Values</h2>
-            
+
             <div class="row">
                 <div class="col-md-4">
                     <div class="value-card">
@@ -749,38 +929,42 @@
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <h3>Excellence</h3>
-                        <p>We maintain the highest standards in curriculum development, instruction, and student outcomes. Our faculty are industry experts committed to delivering quality education.</p>
+                        <p>We maintain the highest standards in curriculum development, instruction, and student
+                            outcomes. Our faculty are industry experts committed to delivering quality education.</p>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="value-card">
                         <div class="value-icon">
                             <i class="fas fa-hands-helping"></i>
                         </div>
                         <h3>Student Success</h3>
-                        <p>Our programs are designed to ensure every student achieves their career goals and reaches their full potential. We provide comprehensive support services from enrollment to employment.</p>
+                        <p>Our programs are designed to ensure every student achieves their career goals and reaches
+                            their full potential. We provide comprehensive support services from enrollment to
+                            employment.</p>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="value-card">
                         <div class="value-icon">
                             <i class="fas fa-industry"></i>
                         </div>
                         <h3>Industry Alignment</h3>
-                        <p>We continuously update our programs to match current industry needs and emerging technologies. Our advisory board includes leaders from top companies in our fields.</p>
+                        <p>We continuously update our programs to match current industry needs and emerging
+                            technologies. Our advisory board includes leaders from top companies in our fields.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="container">
             <h2 class="section-title" style="color: var(--accent-color)">By The Numbers</h2>
-            
+
             <div class="row">
                 <div class="col-md-3">
                     <div class="stat-item">
@@ -788,21 +972,21 @@
                         <div class="stat-label">Years of Excellence</div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3">
                     <div class="stat-item">
                         <div class="stat-number">10,000+</div>
                         <div class="stat-label">Graduates</div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3">
                     <div class="stat-item">
                         <div class="stat-number">85%</div>
                         <div class="stat-label">Job Placement Rate</div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3">
                     <div class="stat-item">
                         <div class="stat-number">50+</div>
@@ -812,23 +996,25 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Team Section -->
     <section class="team-section">
         <div class="container">
             <h2 class="section-title">Meet Our Instructors</h2>
-            
+
             <div class="row">
                 <div class="col-md-4">
                     <div class="team-card">
                         <div class="team-image">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Michael Johnson - IT Instructor">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                alt="Michael Johnson - IT Instructor">
                         </div>
                         <div class="team-info">
                             <h3>Michael Johnson</h3>
                             <p class="text-muted">Senior IT Instructor</p>
-                            <p>10+ years industry experience with certifications in networking and cloud computing. Specializes in hands-on technical training.</p>
-                            <div class="expertise mt-2">
+                            <p>10+ years industry experience with certifications in networking and cloud computing.
+                                Specializes in hands-on technical training.</p>
+                            <div class="mt-2 expertise">
                                 <span class="badge" style="background-color: #0a2463">CCNA</span>
                                 <span class="badge" style="background-color: #0a2463">AWS</span>
                                 <span class="badge" style="background-color: #0a2463">Linux</span>
@@ -836,17 +1022,19 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="team-card">
                         <div class="team-image">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Sarah Williams - Business Instructor">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                alt="Sarah Williams - Business Instructor">
                         </div>
                         <div class="team-info">
                             <h3>Sarah Williams</h3>
                             <p class="text-muted">Business Programs Lead</p>
-                            <p>Former corporate trainer with expertise in business administration, project management, and professional development.</p>
-                            <div class="expertise mt-2">
+                            <p>Former corporate trainer with expertise in business administration, project management,
+                                and professional development.</p>
+                            <div class="mt-2 expertise">
                                 <span class="badge" style="background-color: #0a2463">PMP</span>
                                 <span class="badge" style="background-color: #0a2463">Six Sigma</span>
                                 <span class="badge" style="background-color: #0a2463">MBA</span>
@@ -854,17 +1042,19 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="team-card">
                         <div class="team-image">
-                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="David Kim - Software Development Instructor">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                alt="David Kim - Software Development Instructor">
                         </div>
                         <div class="team-info">
                             <h3>David Kim</h3>
                             <p class="text-muted">Software Development Instructor</p>
-                            <p>Full-stack developer with 8 years experience teaching programming languages and modern development frameworks.</p>
-                            <div class="expertise mt-2">
+                            <p>Full-stack developer with 8 years experience teaching programming languages and modern
+                                development frameworks.</p>
+                            <div class="mt-2 expertise">
                                 <span class="badge" style="background-color: #0a2463">JavaScript</span>
                                 <span class="badge" style="background-color: #0a2463">Python</span>
                                 <span class="badge" style="background-color: #0a2463">React</span>
@@ -874,34 +1064,36 @@
                 </div>
             </div>
 
-            <div class="text-center mt-5">
+            <div class="mt-5 text-center">
                 <a href="#" class="btn btn-primary">
-                    <i class="fas fa-users me-2"></i> View All Instructors
+                    <i class="me-2 fas fa-users"></i> View All Instructors
                 </a>
             </div>
         </div>
     </section>
-    
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-title">Ready to Start Your Career Journey?</h2>
-            <p>Join thousands of professionals who have launched successful careers with our training programs. Our admissions team is ready to help you take the first step toward your new career.</p>
+            <p>Join thousands of professionals who have launched successful careers with our training programs. Our
+                admissions team is ready to help you take the first step toward your new career.</p>
             <a href="courses.html" class="btn btn-cta">
-                <i class="fas fa-book-open me-2"></i>Explore Our Courses
+                <i class="me-2 fas fa-book-open"></i>Explore Our Courses
             </a>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="mb-5 mb-lg-0 col-lg-4">
                     <a href="index.html">
                         <img src="logo/blackgold%20png.png" alt="KONASAL Logo" class="footer-logo">
                     </a>
-                    <p class="text-white">KONASAL Training Institute provides career-focused education to help students launch successful careers in technology and beyond.</p>
+                    <p class="text-white">KONASAL Training Institute provides career-focused education to help students
+                        launch successful careers in technology and beyond.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -909,8 +1101,8 @@
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
-                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+
+                <div class="mb-4 mb-md-0 col-lg-2 col-md-4">
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
@@ -920,8 +1112,8 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+
+                <div class="mb-4 mb-md-0 col-lg-3 col-md-4">
                     <h3 class="footer-title">Contact Us</h3>
                     <ul class="footer-links contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Tech City, TC 10101</li>
@@ -929,7 +1121,7 @@
                         <li><i class="fas fa-envelope"></i> info@konasal.edu</li>
                     </ul>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-4">
                     <h3 class="footer-title">Newsletter</h3>
                     <p>Subscribe to our newsletter for the latest updates and course offerings.</p>
@@ -943,34 +1135,118 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>&copy; 2025 Konasal Training Institute. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
+
     <!-- jQuery & Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            // Change icon based on menu state
+            const icon = mobileMenuToggle.querySelector('i');
+            if (navMenu.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('#mobileMenuToggle') &&
+                !event.target.closest('#navMenu') &&
+                navMenu.classList.contains('show')) {
+                navMenu.classList.remove('show');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when window is resized to desktop size
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 991) {
+                navMenu.classList.remove('show');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
         // Login Modal Functionality
         const loginBtn = document.getElementById('loginBtn');
-        const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-        
+        const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+        const loginModal = document.createElement('div');
+
+        loginModal.innerHTML = `
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Login to Your Account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="loginEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="loginPassword" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <button type="submit" class="w-100 btn btn-primary">Login</button>
+                            </form>
+                            <div class="mt-3 text-center">
+                                <a href="#" class="text-decoration-none">Forgot password?</a>
+                                <p class="mt-2">Don't have an account? <a href="#" class="text-decoration-none">Register here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(loginModal);
+
         loginBtn.addEventListener('click', () => {
-            loginModal.show();
+            const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+            modal.show();
         });
-        
+
+        loginBtnDesktop.addEventListener('click', () => {
+            const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+            modal.show();
+        });
+
+
+
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     targetElement.scrollIntoView({
@@ -979,28 +1255,7 @@
                 }
             });
         });
-        
-        // Add animation to stats when they come into view
-        const animateStats = () => {
-            const statItems = document.querySelectorAll('.stat-item');
-            statItems.forEach(item => {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-                
-                observer.observe(item);
-            });
-        };
-        
-        // Initialize animations when page loads
-        window.addEventListener('DOMContentLoaded', () => {
-            animateStats();
-        });
     </script>
 </body>
+
 </html>
